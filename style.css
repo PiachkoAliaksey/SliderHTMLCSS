@@ -1,0 +1,208 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* Don't kill focus outline for keyboard users: http://24ways.org/2009/dont-lose-your-focus */
+a:hover, a:active {
+    outline: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+* {
+  -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth; 
+}
+
+body{
+    background-color: aqua;
+}
+.section{
+    margin:0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider{
+    position: absolute;
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width:640px;
+    height: 490px;
+    border-radius:10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #000000;
+}
+
+.slide{
+    width:500%;
+    height: 500px;
+    display: flex;
+}
+
+.slide input{
+    display: none;
+}
+.item{
+    width:20%;
+    transition: 2s;
+    background-color: cadetblue;
+}
+.item img{
+    width: 100%;
+    height: auto;
+}
+.item h4{
+    position: absolute;
+    color: aliceblue;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 50;
+    font-size: 20px;
+}
+.nav_m{
+    position: absolute;
+    width: 640px;
+    margin-top: -90px;
+    justify-content: center;
+    display: flex;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+.btn_m{
+    border:2px solid burlywood;
+    padding: 4px;
+    border-radius: 4px;
+    width: 30px;
+    
+    cursor: pointer;
+    transition: 1s;
+    z-index: 6;
+}
+.btn_m:not(:last-child){
+    margin-right: 10px;
+}
+.btn_m:hover{
+    background-color: brown;
+}
+#radio_1:checked ~.first{
+    margin-left: 0;
+}
+
+#radio_2:checked ~.first{
+    margin-left: -20%;
+}
+#radio_3:checked ~.first{
+    margin-left: -40%;
+}
+#radio_4:checked ~.first{
+    margin-left: -60%;
+}
+
+.nav_auto{
+    position: absolute;
+    width: 640px;
+    margin-top: 410px;
+    display:flex;
+    justify-content: center;
+    
+}
+.nav_auto div{
+    border: 2px solid burlywood;
+    padding: 4px;
+    border-radius: 4px;
+    width: 30px;
+    z-index: 5;
+    transition: 1s;
+}
+.nav_auto div:not(:last-child){
+    margin-right: 10px;
+    justify-content: center;
+}
+#radio_1:checked ~ .nav_auto .nav_1{
+    background-color: brown;
+}
+
+#radio_2:checked ~ .nav_auto .nav_2{
+    background-color: brown;
+}
+#radio_3:checked ~ .nav_auto .nav_3{
+    background-color: brown;
+}
+#radio_4:checked ~ .nav_auto .nav_4{
+    background-color: brown;
+}
+
+
+
+
